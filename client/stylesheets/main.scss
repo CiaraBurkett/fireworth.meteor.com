@@ -1,0 +1,56 @@
+@import "packages/bourbon/bourbon";
+@import "base/base";
+@import "packages/neat/neat";
+
+// Font Variables
+$jubilat: "jubilat", Times, serif;
+$proxima: "proxima-nova", "Helvetica Neue", Arial, sans-serif;
+
+// Color Variables
+$orange: #F06619;
+$white: #F4F9FC;
+$blue: #0290DD;
+$deep: #014B74;
+$blackblue: #002539;
+
+// Global
+body {
+   font-family: $proxima;
+   font-size: 200%;
+   h1, h2, h3, h4, h5, h6 {
+      font-family: $jubilat;
+      font-weight: 400;
+   }
+}
+
+// Header
+header {
+   text-align: center;
+   h1 {
+      text-transform: lowercase;
+   }
+   .tagline {
+      span {
+         font-family: $jubilat;
+      }
+   }
+}
+
+// Section
+section {
+   ul {
+      li {
+         @include span-columns(4);
+         @include omega(3n);
+         img {
+            border-radius: 200px;
+         }
+      }
+   }
+}
+
+// Footer
+footer {
+   text-align: center;
+   text-transform: lowercase;
+}
